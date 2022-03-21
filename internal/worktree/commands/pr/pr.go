@@ -15,8 +15,8 @@ import (
 func New(restClient ghapi.RESTClient) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "pr",
-		Short: "Workspace from PR",
-		Long:  "Create a new workspace from a PR number",
+		Short: "worktree from PR",
+		Long:  "Create a new worktree from a PR number",
 		Args: func(cmd *cobra.Command, args []string) error {
 			if len(args) < 1 {
 				return errors.New("requires a pr number")
