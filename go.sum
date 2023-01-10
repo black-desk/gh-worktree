@@ -23,6 +23,8 @@ github.com/black-desk/lib/go v0.0.0-20230110170133-a70e02bdbed9 h1:mirrcM39AmROX
 github.com/black-desk/lib/go v0.0.0-20230110170133-a70e02bdbed9/go.mod h1:crNGoUNnUAigxZQ2tANXjY5bkaKY8DtMt9XEMHsNcCg=
 github.com/black-desk/lib/go v0.0.0-20230110175403-d6d141fe6a3a h1:d/CNcKz/uouXclz6eqx1b+jJfyCIE9fxKwWLWiperxM=
 github.com/black-desk/lib/go v0.0.0-20230110175403-d6d141fe6a3a/go.mod h1:crNGoUNnUAigxZQ2tANXjY5bkaKY8DtMt9XEMHsNcCg=
+github.com/black-desk/lib/go v0.0.0-20230110180151-18443dd72e80 h1:5he4rnsYeWqIQf0cmEZ8gl/Ervq08Krn6C1l64209xg=
+github.com/black-desk/lib/go v0.0.0-20230110180151-18443dd72e80/go.mod h1:crNGoUNnUAigxZQ2tANXjY5bkaKY8DtMt9XEMHsNcCg=
 github.com/cli/go-gh v1.0.0 h1:zE1YUAUYqGXNZuICEBeOkIMJ5F50BS0ftvtoWGlsEFI=
 github.com/cli/go-gh v1.0.0/go.mod h1:bqxLdCoTZ73BuiPEJx4olcO/XKhVZaFDchFagYRBweE=
 github.com/cli/safeexec v1.0.1 h1:e/C79PbXF4yYTN/wauC4tviMxEV13BwljGj0N9j+N00=

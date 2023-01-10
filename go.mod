@@ -3,7 +3,7 @@ module github.com/black-desk/gh-worktree
 go 1.19
 
 require (
-	github.com/black-desk/lib/go v0.0.0-20230110175403-d6d141fe6a3a
+	github.com/black-desk/lib/go v0.0.0-20230110180151-18443dd72e80
 	github.com/cli/go-gh v1.0.0
 	github.com/cli/safeexec v1.0.1
 	github.com/spf13/cobra v1.6.1
