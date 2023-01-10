@@ -1,8 +1,7 @@
 package main
 
 import (
-	"fmt"
-	"os"
+	"log"
 
 	"github.com/despreston/gh-worktree/internal/worktree"
 )
@@ -10,12 +9,10 @@ import (
 func main() {
 	cmd, err := worktree.New()
 	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
-		os.Exit(1)
+                log.Fatal(err)
 	}
 
 	if err := cmd.Execute(); err != nil {
-		fmt.Fprintln(os.Stderr, err)
-		os.Exit(1)
+                log.Fatal(err)
 	}
 }

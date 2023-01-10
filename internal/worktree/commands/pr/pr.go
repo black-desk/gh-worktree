@@ -1,7 +1,6 @@
 package pr
 
 import (
-	"errors"
 	"fmt"
 	"os"
 	"os/exec"
@@ -17,12 +16,7 @@ func New(restClient ghapi.RESTClient) *cobra.Command {
 		Use:   "pr [pr number] <path>",
 		Short: "worktree from PR",
 		Long:  "Create a new worktree from a PR number",
-		Args: func(cmd *cobra.Command, args []string) error {
-			if len(args) < 1 {
-				return errors.New("requires a pr number")
-			}
-			return nil
-		},
+		Args:  cobra.MinimumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			repo, err := gh.CurrentRepository()
 			if err != nil {
