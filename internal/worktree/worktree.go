@@ -2,7 +2,7 @@ package worktree
 
 import (
 	"github.com/cli/go-gh"
-	"github.com/despreston/gh-worktree/internal/worktree/commands/pr"
+	"github.com/black-desk/gh-worktree/internal/worktree/commands/pr"
 	"github.com/spf13/cobra"
 )
 

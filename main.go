@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/despreston/gh-worktree/internal/worktree"
+	"github.com/black-desk/gh-worktree/internal/worktree"
 )
 
 func main() {
