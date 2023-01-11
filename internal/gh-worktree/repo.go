@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/black-desk/lib/go/errwrap"
-	"github.com/cli/go-gh"
+	"github.com/cli/cli/v2/pkg/cmd/factory"
 	"github.com/cli/go-gh/pkg/repository"
 )
 
@@ -16,12 +16,45 @@ type repo struct {
 	ghRepo repository.Repository
 }
 
+type ghRepo struct {
+	host  string
+	owner string
+	name  string
+}
+
+// Host implements repository.Repository
+func (r *ghRepo) Host() string {
+	return r.host
+}
+
+// Name implements repository.Repository
+func (r *ghRepo) Name() string {
+	return r.name
+}
+
+// Owner implements repository.Repository
+func (r *ghRepo) Owner() string {
+	return r.owner
+}
+
+var _ repository.Repository = &ghRepo{}
+
 var _ Repo = &repo{}
 
 func NewRepo() (Repo, error) {
-	ghRepo, err := gh.CurrentRepository()
+
+	f := factory.New("1") // TODO(black_desk): which version should I use?
+	f.BaseRepo = factory.SmartBaseRepoFunc(f)
+
+	ghcliRepo, err := f.BaseRepo()
 	if err != nil {
 		return nil, errwrap.Trace(err)
+	}
+
+	ghRepo := &ghRepo{
+		host:  ghcliRepo.RepoHost(),
+		owner: ghcliRepo.RepoOwner(),
+		name:  ghcliRepo.RepoName(),
 	}
 
 	log.Infof(
